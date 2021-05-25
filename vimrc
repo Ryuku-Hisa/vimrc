@@ -21,6 +21,7 @@ set showmatch
 " シンタックスハイライトの有効化
 syntax on
 " カラースキームの変更
+set t_Co=256 
 colorscheme molokai
 " ステータスラインの有効化
 set laststatus=2
