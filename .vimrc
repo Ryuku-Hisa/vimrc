@@ -1,3 +1,18 @@
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" カラーブラケット
+Plugin 'frazrepo/vim-rainbow'
+let g:rainbow_active = 1
+let g:rainbow_ctermfgs = ['yellow','magenta', 'lightblue']
+
+" ここまでにプラグインを記入する
+call vundle#end()           
+filetype plugin indent on   
+
 " ビープ音を無効化
 set vb t_vb=
 
@@ -21,7 +36,6 @@ set showmatch
 " シンタックスハイライトの有効化
 syntax on
 " カラースキームの変更
-set t_Co=256 
 colorscheme molokai
 " ステータスラインの有効化
 set laststatus=2
@@ -38,7 +52,7 @@ set expandtab
 set tabstop=2
 " 行頭以外のtabをスペース2個分にする
 set shiftwidth=2
-  
+
 " 大文字小文字区別せず検索
 set ignorecase
 " 検索文字列に大文字が含まれていれば区別して検索
@@ -51,6 +65,3 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-
-" InsertモードでDeleteを使えるようにする
-set backspace=indent,eol,start 
